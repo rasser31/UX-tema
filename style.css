@@ -1,1 +1,188 @@
 
+
+body{    
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+header{
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 150px;
+    border-bottom: rgb(0 0 0 / 30%) solid 1px;
+    box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 30%);
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+}
+
+.hoved-nav, .bib-info{
+    display: flex;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.hoved-nav a:hover, .bib-info a:hover{
+    padding-bottom: 22px;
+    border-bottom: 5px solid black;
+}
+
+.hoved-nav{
+    width: 60%;
+}
+
+.hoved-nav li{
+    margin-right: 40px;
+    list-style-type: none;
+    font-size: 18px;
+    display: inline;
+}
+
+.hoved-nav li a{
+    color: #252525;
+    font-weight: bold;
+    font-family: FaktPro-SemiBold,sans-serif;
+}
+
+.bib-info{
+    width: 40%;
+    flex-direction: row-reverse;
+}
+
+.bib-info li{
+    display: inline;
+    padding-left: 20px;
+}
+
+.bib-info li a{
+    font-size: 16px;
+    font-family: FaktPro-Normal,sans-serif;
+    color: #262626;
+}
+
+.logo{
+    display: inline-block;
+    border: 0;
+    vertical-align: middle;
+    max-width: 8em;
+}
+
+.åbningstider_button{
+    font-family: FaktPro-Normal,sans-serif;
+    float: right;
+    border-radius: 5px;
+    background-color: #e4e4e4;
+    padding: 20px 80px 14px 15px;
+    width: 65px;
+    color: #252525;
+    margin-right: 2%;
+    font-size: 16px;
+}
+
+.åbningstider_button:hover{
+    background-color: #79ba00;
+    color: white;
+}
+
+.login_button{
+    float: right;
+    border-radius: 5px;
+    background-color: #79ba00;
+    padding: 20px 80px 14px 15px;
+    width: 65px;
+    font-family: FaktPro-Normal,sans-serif;
+    color: #262626;
+    font-size: 16px;
+}
+
+.login_button:hover{
+    background-color: #262626;
+    color: white;
+}
+
+
+main{
+    margin-top: 15px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.searchbar{
+    display: flex;
+}
+
+input{
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 1px solid #79ba00;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+
+.search-dropdown{
+    border: 1px solid #79ba00;
+    width: 25%;
+    padding: 5px 15px;
+}
+
+.search-dropdown pre{
+    font-family: FaktPro-Normal,sans-serif;
+}
+
+main .search-button{
+    font-family: FaktPro-Normal,sans-serif;
+    padding: 20px 15px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #e4e4e4;
+    background-color: #e4e4e4;
+    width: 5%;
+}
+
+
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #262626;
+    font-family: FaktPro-Normal,sans-serif;
+    display: flex;
+    
+}
+
+footer ul{
+    padding-left: 0;
+    list-style-type: none;
+    padding-right: 60px;
+}
+
+.footer-list-header{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer a, footer li{
+    color: white;
+}
+
+footer a:hover{
+    color: rgb(156, 156, 156);
+}
+
+.footer-kontakt{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
