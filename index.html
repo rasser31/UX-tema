@@ -6,42 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KøgeBibliotekerne</title>
     <link rel="stylesheet" href="style.css">
+
     <script src="main.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 
     <link rel="shortcut icon" href="https://www.koegebib.dk/sites/koege.ddbcms.dk/files/koege-bibliotekerne_0.png" type="image/png">
 </head>
 <body>
     <header>
       <img src="images/koege-bibliotekerne.png" alt="logo" class="logo">
-      <a href="" class="login_button">Log ind</a>
-      <a href="" class="åbningstider_button">Åbningstider</a>
+      <a id="language-login" href="" class="login_button">Log ind</a>
+      <a id="language-opening" href="" class="åbningstider_button">Åbningstider</a>
 
       <nav>
         <ul class="hoved-nav">
-          <li><a href="">Forsiden</a></li>
-          <li><a href="">E-bøger og medier</a></li>
-          <li><a href="">Anbefalinger</a></li>
-          <li><a href="">Kalender</a></li>
+          <li><a class="hover" id="language-frontpage" href="">Forside</a></li>
+          <li><a class="hover" id="language-events" href="">Arrangementer</a></li>
+          <li><a class="hover" id="language-books" href="">Bøger</a></li>
+          <li><a class="hover" id="language-e-books" href="">E-bøger og medier</a></li>
+          <li><a class="hover" id="language-news" href="">Nyheder</a></li>
         </ul>
-  
-        <ul class="bib-info">
-          <li><a href="">Brug os</a></li>
-          <li><a href="">Kontakt os</a></li>
-          <li><a href="">Find os</a></li>
+        <ul x-data="{ isOpen: false }" class="bib-info">
+          <li><a onclick="facebooklink()" href="https://www.facebook.com/koegebib"><img class="facebook-icon" src="images/OmOs_2.png" alt="facebook-logo"></a></li>
+          <li x-data="{ isOpen: false }">
+            <img id="language-changer" class="language-icon" src="images/Dansk.png" alt="language-symbol">
+          </li>
+          <button @click="isOpen = true" class="dropdown">▼<img class="icons" src="images/Language.png" alt="language-icon"></button>
+          <ul x-show="isOpen" @click.away="isOpen = false" class="dropdown-content">
+            <button onclick="dansk()" class="language-button">Dansk</button>
+            <button onclick="engelsk()" class="language-button">English</button>
+          </ul>
+          <li><a class="hover" href="">Info </a><img class="icons" src="images/Information.png" alt="Info-icon"></li>
+          <li><a class="hover" id="language-contact" href="">Kontakt os </a><img class="icons" src="images/Kontakt.png" alt="contact-icon"></li>
+          <li><a class="hover" id="language-find" href="">Find os </a><img class="icons" src="images/Maps.png" alt="find-icon"></li>
         </ul>
       </nav>
     </header>
 
 <main>
   <section class="searchbar">
-    <input placeholder="Skriv f.eks. Harry Potter, krimi eller lign." type="text" name="" id="">
-    <div class="search-dropdown"><pre>Søg i alle                                  ▼</pre>
+    <input placeholder="Skriv f.eks. Harry Potter, krimi eller lign." type="text" id="searchbar-text">
+    <div class="search-dropdown"><pre id="search-category">Søg i alle                                      ▼</pre>
 
     </div>
-    <div class="search-button">
-      Søg
-    </div>
-
+    <div class="search-button">Søg</div>
   </section>
 
 

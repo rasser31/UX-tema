@@ -1,10 +1,22 @@
-
-
 body{    
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.icons{
+    width: 20px;
+    height: 20px;
+}
+
+.facebook-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.language-icon{
+    width: 50px;
 }
 
 header{
@@ -30,9 +42,42 @@ nav{
     padding: 0;
 }
 
-.hoved-nav a:hover, .bib-info a:hover{
+.hoved-nav .hover:hover, .bib-info .hover:hover{
     padding-bottom: 22px;
     border-bottom: 5px solid black;
+}
+
+.select-language:hover{
+    padding-bottom: 21px;
+    border-bottom: 5px solid black;
+}
+
+.dropdown{
+    border: none;
+    background: none;
+}
+
+.dropdown-content{
+    border: 1px solid black;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    width: 60px;
+}
+
+.language-button{
+    border: none;
+    background: none;
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.language-button:hover{
+    background-color: #7b7b7b;
+    color: #fff;
 }
 
 .hoved-nav{
@@ -80,11 +125,12 @@ nav{
     float: right;
     border-radius: 5px;
     background-color: #e4e4e4;
-    padding: 20px 80px 14px 15px;
-    width: 65px;
+    padding: 20px 25px 14px 15px;
+    width: 120px;
     color: #252525;
     margin-right: 2%;
     font-size: 16px;
+
 }
 
 .åbningstider_button:hover{
@@ -107,7 +153,6 @@ nav{
     background-color: #262626;
     color: white;
 }
-
 
 main{
     margin-top: 15px;
@@ -148,8 +193,6 @@ main .search-button{
 
 
 
-
-
 footer{
     position: fixed;
     bottom: 0;
@@ -158,6 +201,7 @@ footer{
     background-color: #262626;
     font-family: FaktPro-Normal,sans-serif;
     display: flex;
+    width: 100%;
     
 }
 
