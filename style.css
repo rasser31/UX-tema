@@ -1,3 +1,5 @@
+
+/* Fjernelse af kanterne, så vores bordere kan gå helt ud til kanten */
 body{    
     margin-left: 0px;
     margin-right: 0px;
@@ -5,20 +7,24 @@ body{
     padding-right: 0px;
 }
 
+/* Ændring af højde og bredde af vores iconer */
 .icons{
     width: 20px;
     height: 20px;
 }
 
+/* Specifik lndring af facebook ikonet, da det skulle have en lidt anden størrelse */
 .facebook-icon{
     width: 30px;
     height: 30px;
 }
 
+/* Samme som forrige, dog bare med bredden af ikonet */
 .language-icon{
     width: 50px;
 }
 
+/* Skalering af vores header, samt indsættelse af underkant */
 header{
     padding-left: 20%;
     padding-right: 20%;
@@ -27,36 +33,43 @@ header{
     box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 30%);
 }
 
+/* Fjernelse underlinjen af alle links */
 a{
     text-decoration: none;
 }
 
+/* Displayer flex, så vi kan få ting til at fylde ud, istedet for at være under hinanden */
 nav{
     display: flex;
     width: 100%;
 }
 
+/* Displayer da vi skal bearbejde med elementer igennem disse to */
 .hoved-nav, .bib-info{
     display: flex;
     margin-top: 50px;
     padding: 0;
 }
 
+/* Giver vores navbar links en hover funktion, så det er tydeligt når man kan trykke på dem */
 .hoved-nav .hover:hover, .bib-info .hover:hover{
     padding-bottom: 22px;
     border-bottom: 5px solid black;
 }
 
+/* Specifik hover til sprog knappen */
 .select-language:hover{
     padding-bottom: 21px;
     border-bottom: 5px solid black;
 }
 
+/* Fjernelse af standart elementer på knappen, så det kun er ikonet der er synligt */
 .dropdown{
     border: none;
     background: none;
 }
 
+/* Styling af vores elementer indeni dropdown menuen */
 .dropdown-content{
     border: 1px solid black;
     list-style-type: none;
@@ -65,6 +78,7 @@ nav{
     width: 60px;
 }
 
+/* Styling af sprog knapperne ([Engelsk] og [Dansk]) */
 .language-button{
     border: none;
     background: none;
@@ -75,15 +89,18 @@ nav{
 
 }
 
+/* Hover funktion af vores [Engelsk] og [Dansk] knap */
 .language-button:hover{
     background-color: #7b7b7b;
     color: #fff;
 }
 
+/* Bredde på vores hovednav */
 .hoved-nav{
     width: 60%;
 }
 
+/* Styling af vores liste i hovednav */
 .hoved-nav li{
     margin-right: 40px;
     list-style-type: none;
@@ -91,28 +108,33 @@ nav{
     display: inline;
 }
 
+/* Ændring af fontet i vores hovednav */
 .hoved-nav li a{
     color: #252525;
     font-weight: bold;
     font-family: FaktPro-SemiBold,sans-serif;
 }
 
+/* Definering af bredden på vores info side (Højre side af navbaren), samt gør rækken modsat, så de bliver vist fra højre til venstre */
 .bib-info{
     width: 40%;
     flex-direction: row-reverse;
 }
 
+/* Displayer inline, så elementerne er på samme linje */
 .bib-info li{
     display: inline;
     padding-left: 20px;
 }
 
+/* Ændring af font størrelse, samt giver teksten et font at arbejde med */
 .bib-info li a{
     font-size: 16px;
     font-family: FaktPro-Normal,sans-serif;
     color: #262626;
 }
 
+/* Ændring på vores logo størrelse og fjerner dens border */
 .logo{
     display: inline-block;
     border: 0;
@@ -120,6 +142,7 @@ nav{
     max-width: 8em;
 }
 
+/* Styling af vores åbningstider knap, samt skubber den til højre */
 .åbningstider_button{
     font-family: FaktPro-Normal,sans-serif;
     float: right;
@@ -133,11 +156,13 @@ nav{
 
 }
 
+/* Giver vores åbningstider knap en hover funktion */
 .åbningstider_button:hover{
     background-color: #79ba00;
     color: white;
 }
 
+/* Styling af vores log ind knap, samt skubber den til højre */
 .login_button{
     float: right;
     border-radius: 5px;
@@ -149,21 +174,25 @@ nav{
     font-size: 16px;
 }
 
+/* Giver vores log ind knap en hover funktion */
 .login_button:hover{
     background-color: #262626;
     color: white;
 }
 
+/* Sætter grænserne på vores main side, så den ikke fylder mere end vores header */
 main{
     margin-top: 15px;
     padding-left: 20%;
     padding-right: 20%;
 }
 
+/* Displayer flex i vores søgebar */
 .searchbar{
     display: flex;
 }
 
+/* Styiling af vores input felt */
 input{
     font-size: 16px;
     padding: 5px 15px;
@@ -172,16 +201,19 @@ input{
     width: 70%;
 }
 
+/* Styling af vores kategori felt */
 .search-dropdown{
     border: 1px solid #79ba00;
     width: 25%;
     padding: 5px 15px;
 }
 
+/* Ændring af fontet i vores kategori felt */
 .search-dropdown pre{
     font-family: FaktPro-Normal,sans-serif;
 }
 
+/* Styilng af vores søge knap, samt ændring af fontet */
 main .search-button{
     font-family: FaktPro-Normal,sans-serif;
     padding: 20px 15px;
@@ -191,8 +223,7 @@ main .search-button{
     width: 5%;
 }
 
-
-
+/* Styling af vores footer, så den forbliver i bunden af skærmen. Samt giver den samme grænser som header og main */
 footer{
     position: fixed;
     bottom: 0;
@@ -205,28 +236,32 @@ footer{
     
 }
 
+/* Sætter grænser på størrelserne på vores lister i footeren */
 footer ul{
     padding-left: 0;
     list-style-type: none;
     padding-right: 60px;
 }
 
+/* Ændring af titlerne i vores kategorier som kan findes i footeren */
 .footer-list-header{
     color: white;
     font-size: 18px;
     margin-bottom: 20px;
 }
 
+/* Gør listernes tekster til at være hvid */
 footer a, footer li{
     color: white;
 }
 
+/* Giver vores footer links en hover funktion, så man ved de kan trykkes på */
 footer a:hover{
     color: rgb(156, 156, 156);
 }
 
+/* Giver kontakt elementet i footeren en padding, så den skilder sig ud fra de andre */
 .footer-kontakt{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-

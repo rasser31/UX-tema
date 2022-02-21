@@ -7,18 +7,27 @@
     <title>KøgeBibliotekerne</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Indsættelse af vores javascript fil, så vi kan arbejde eksternt med javascript -->
     <script src="main.js" defer></script>
+
+    <!-- Tilknytning til alpine.js, så det kan benyttes -->
     <script src="//unpkg.com/alpinejs" defer></script>
 
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://www.koegebib.dk/sites/koege.ddbcms.dk/files/koege-bibliotekerne_0.png" type="image/png">
 </head>
 <body>
     <header>
+      <!-- Logo ikonet (Ikke trykbart, dog kan det gøres ret hurtigt) -->
       <img src="images/koege-bibliotekerne.png" alt="logo" class="logo">
+
+      <!-- Vores knapper til at se åbningstiderne, samt logge ind på bibliotekets hjemmeside -->
       <a id="language-login" href="" class="login_button">Log ind</a>
       <a id="language-opening" href="" class="åbningstider_button">Åbningstider</a>
 
+      <!-- Vores navigationsbar -->
       <nav>
+        <!-- Hovedelementerne i vores navigationsbar -->
         <ul class="hoved-nav">
           <li><a class="hover" id="language-frontpage" href="">Forside</a></li>
           <li><a class="hover" id="language-events" href="">Arrangementer</a></li>
@@ -26,30 +35,45 @@
           <li><a class="hover" id="language-e-books" href="">E-bøger og medier</a></li>
           <li><a class="hover" id="language-news" href="">Nyheder</a></li>
         </ul>
+
+        <!-- Ekstra menuer, såsom info og sprog -->
+        <!-- Her er der brugt Alpine.js, hvilket vi gør til at få vores menu frem til at vælge sprog -->
+        <!-- (Alpine.js) Vi starter ud med at have en isOpen: false, da vi ikke vil have at vores menu er åben når man kommer ind på siden -->
         <ul x-data="{ isOpen: false }" class="bib-info">
           <li><a onclick="facebooklink()" href="https://www.facebook.com/koegebib"><img class="facebook-icon" src="images/OmOs_2.png" alt="facebook-logo"></a></li>
-          <li x-data="{ isOpen: false }">
+          <li>
             <img id="language-changer" class="language-icon" src="images/Dansk.png" alt="language-symbol">
           </li>
+
+          <!-- Her har vi en knap der er sat op som værende et ikon (Globus), hvilket åbner vores alpine.js menu til at vælge sprog -->
+          <!-- (Alpine.js) Derefter benytter vi en @click, så når vi trykker på knappen, så sætter den værdien til at være true. Dette gør att menuen bliver åbnet -->
           <button @click="isOpen = true" class="dropdown">▼<img class="icons" src="images/Language.png" alt="language-icon"></button>
+
+          <!-- (Alpine.js) Til sidst har vi en funktion der gør at når vi trykker væk fra menuen, så lukker den ned -->
           <ul x-show="isOpen" @click.away="isOpen = false" class="dropdown-content">
             <button onclick="dansk()" class="language-button">Dansk</button>
             <button onclick="engelsk()" class="language-button">English</button>
           </ul>
-          <li><a class="hover" href="">Info </a><img class="icons" src="images/Information.png" alt="Info-icon"></li>
-          <li><a class="hover" id="language-contact" href="">Kontakt os </a><img class="icons" src="images/Kontakt.png" alt="contact-icon"></li>
-          <li><a class="hover" id="language-find" href="">Find os </a><img class="icons" src="images/Maps.png" alt="find-icon"></li>
+          <li><a class="hover" href="">Info </a><img class="icons" src="images/Information.png" alt="Info-icon" style="margin-right: 25px;"></li>
+          <li><a class="hover contact" id="language-contact" href="">Kontakt os</a></li>
         </ul>
       </nav>
     </header>
 
-<main>
-  <section class="searchbar">
-    <input placeholder="Skriv f.eks. Harry Potter, krimi eller lign." type="text" id="searchbar-text">
-    <div class="search-dropdown"><pre id="search-category">Søg i alle                                      ▼</pre>
 
-    </div>
-    <div class="search-button">Søg</div>
+<!-- Indtil videre er det eneste der er inblandet i vores <main> en søgebar, samt kategori vælger og en søgeknap -->
+<main>
+
+  <!-- Sektionen til vores søgebar -->
+  <section class="searchbar">
+    <!-- Søgefeltet, der hvor man søger efter et element -->
+    <input placeholder="Skriv f.eks. Harry Potter, krimi eller lign." type="text" id="searchbar-text">
+    
+    <!-- Skal være til brug af specificering af kategorier til søgning -->
+    <div class="search-dropdown"><pre id="search-category">Søg i alle                                      ▼</pre></div>
+
+    <!-- Søge knappen -->
+    <div id="language-search" class="search-button">Søg</div>
   </section>
 
 
@@ -58,6 +82,7 @@
 
 </main>
 
+  <!-- Vores footer element med 4 lister indblandet. Dette er links der normalt ville kunne findes inde på info siden -->
     <footer>
       <ul>
         <li class="footer-list-header">Det kan du på biblioteket</li>
